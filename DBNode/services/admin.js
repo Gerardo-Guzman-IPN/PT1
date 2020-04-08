@@ -100,7 +100,7 @@ const update = (doc, options, appName) => {
     return dbRef.update(doc.data);
 }
 
-const batchedSet = (docs, options, appName) => {
+const batchedSet = (docs) => {
     const batch = db.batch();
     docs.forEach((document) => {
         const ref = db.collection(document.collection);
