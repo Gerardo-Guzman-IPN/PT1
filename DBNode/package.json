@@ -12,6 +12,10 @@
   "author": "Gerardo",
   "license": "MIT",
   "dependencies": {
-    "firebase": "^7.13.1"
+    "csv-parser": "^2.3.2",
+    "firebase": "^7.13.1",
+    "firebase-admin": "^8.10.0",
+    "iconv-lite": "^0.5.1",
+    "node-xlsx": "^0.15.0"
   }
 }
