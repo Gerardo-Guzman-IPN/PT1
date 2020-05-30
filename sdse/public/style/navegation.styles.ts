@@ -20,7 +20,8 @@ createStyles({
           display: 'block',
           position: 'relative',
           margin: theme.spacing(1),
-          maxWidth: '2rem'
+          maxWidth: '2rem',
+          cursor: 'pointer'
       },
   },
   search: {

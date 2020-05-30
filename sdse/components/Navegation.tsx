@@ -13,6 +13,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import InfoIcon from '@material-ui/icons/Info';
 import { Box } from '@material-ui/core';
 import { useStyles } from '../public/style/navegation.styles';
 
@@ -70,11 +71,17 @@ const Navegation: React.FunctionComponent = (props: any) => {
         >
             <MenuItem>
                 <IconButton aria-label="show 4 new mails" color="inherit">
-                    <a href="https://github.com/Gerardo-Guzman-IPN/PT1">
+                    <a style={{color: 'inherit'}} href="https://github.com/Gerardo-Guzman-IPN/PT1">
                         <GitHubIcon />
                     </a>
                 </IconButton>
-                <p>Messages</p>
+                <p>GitHub</p>
+            </MenuItem>
+            <MenuItem>
+                <IconButton aria-label="About project" color="inherit">
+                    <InfoIcon />
+                </IconButton>
+                <p>Información</p>
             </MenuItem>
             <MenuItem>
                 <IconButton aria-label="show 11 new notifications" color="inherit">
@@ -82,7 +89,7 @@ const Navegation: React.FunctionComponent = (props: any) => {
                         <NotificationsIcon />
                     </Badge>
                 </IconButton>
-                <p>Notifications</p>
+                <p>Notificaciones</p>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
@@ -93,7 +100,7 @@ const Navegation: React.FunctionComponent = (props: any) => {
                 >
                     <AccountCircle />
                 </IconButton>
-                <p>Profile</p>
+                <p>Perfil</p>
             </MenuItem>
         </Menu>
     );
@@ -103,7 +110,9 @@ const Navegation: React.FunctionComponent = (props: any) => {
             <AppBar position="static">
                 <Toolbar>
                     <div>
-                        <img src="/img/logo1-blanco.png" alt="ipn Logo" className={classes.imageLogo}/>
+                        <Link href='/'>
+                            <img src="/img/logo1-blanco.png" alt="ipn Logo" className={classes.imageLogo}/>
+                        </Link>
                     </div>
                     <Typography className={classes.title} variant="h6" noWrap>
                         REPOSITORIO IPN
@@ -129,8 +138,13 @@ const Navegation: React.FunctionComponent = (props: any) => {
                             <GitHubIcon />
                         </IconButton>
                         </a>
+                        <IconButton aria-label="Acerca de" color="inherit">
+                            <Link href="/about">
+                                <InfoIcon />
+                            </Link>
+                        </IconButton>
                         <IconButton aria-label="show 17 new notifications" color="inherit">
-                            <Badge badgeContent={17} color="secondary">
+                            <Badge badgeContent={7} color="secondary">
                                 <NotificationsIcon />
                             </Badge>
                         </IconButton>
